@@ -14,14 +14,14 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../topics.css">
 </head>
-<body>  
+<body>
   <header>
     <div class="container" style="margin: 0;">
       <div class="header-section">
         <div id="particles-js">
         </div>
         <div class="header-font center-align">
-          
+
           <span class="topic">Manchester</span>
         </div>
       </div>
@@ -43,41 +43,35 @@
       <div class="col s12 m12 l6" id="data-entry" style="padding-top: 30px;">
         <div class="row">
           <div class="input-field col s5">
-            <input id="data_bit" type="text" class="validate">
+            <input id="data_bit" type="text" class="validate" value="10101">
             <label for="data_bit">Enter Data Bit</label>
           </div>
           <div class="input-field col s5">
-            <input id="voltage" type="text" class="validate">
+            <input id="voltage" type="text" class="validate" value="1">
             <label for="voltage">Enter Voltage</label>
-          </div>
-          <div class="" style="padding-top: 13px;">
-            <button class="btn waves-effect waves-light" id="submit">Generate Graph
-              <i class="material-icons right">send</i>
-            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="manchester">  
+  <div id="manchester">
   </div>
 
-<!-- Floating button -->
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
-      <i class="large material-icons">folder</i>
+    <i class="large material-icons">memory</i>
     </a>
     <ul>
-      <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="NRZ-L" href="../nrz-l"><i class="material-icons" >L</i></a></li>
-      <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="NRZ-I" href="../nrz-i"><i class="material-icons">I</i></a></li>
-      <li><a class="btn-floating tooltipped green" data-position="left" data-tooltip="Manchester" href="../manchester"><i class="material-icons">M</i></a></li>
-      <li><a class="btn-floating tooltipped blue" data-position="left" data-tooltip="Differential Manchester" href="../differential-manchester"><i class="material-icons">D</i></a></li>
-      <li><a class="btn-floating tooltipped black" data-position="left" data-tooltip="Polar Encodings" href="../polar"><i class="material-icons">P</i></a></li>
+      <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="NRZ-L" href="../nrz-l">L</a></li>
+      <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="NRZ-I" href="../nrz-i">I</a></li>
+      <li><a class="btn-floating tooltipped green" data-position="left" data-tooltip="Manchester" href="../manchester">M</a></li>
+      <li><a class="btn-floating tooltipped blue" data-position="left" data-tooltip="Differential Manchester" href="../differential-manchester">D</a></li>
+      <li><a class="btn-floating tooltipped black" data-position="left" data-tooltip="Polar Encodings" href="../polar">P</a></li>
     </ul>
     <div class="fixed-action-btn horizontal">
-      <a class="btn-floating btn-large red" data-position="bottom" data-tooltip="Home" href="../">
-        <i class="large material-icons">folder</i>
+      <a class="btn-floating btn-large black" data-position="bottom" data-tooltip="Home" href="../">
+      <i class="large material-icons">memory</i>
       </a>
       <ul>
         <li><a class="btn-floating tooltipped green" data-position="top" data-tooltip="Bipolar" href="../bipolar"><i class="material-icons">B</i></a></li>
