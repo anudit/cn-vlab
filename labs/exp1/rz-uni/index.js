@@ -1,23 +1,4 @@
-string = "";
-string+="It is the combination of RZ and NRZ-L.<br>"
-string+="The duration of bit is divided into 2 halves it remains at one level in first half and other level in second half."
-
-//Typing Content
-$("#about_manchester").typed({
-    strings: [
-      string
-	],
-	cursorChar: "█",
-    typeSpeed: 0,
-  });
-
-
-
 $(document).ready(function () {
-
-	particlesJS.load('particles-js', '../particles.json', function() {
-		console.log('particles.json config loaded');
-	});
 
 	plot();
 	$('#data_bit, #voltage').on("input", plot);
@@ -91,35 +72,36 @@ function plot(){
 			if(arr_databit[0]=="0")
 			{
 				x_axis[k] = k;
-				y_axis[k] = 1*voltage;
+				y_axis[k] = 0*voltage;
 				k++;
 			}
 			else
 			{
 				x_axis[k] = k;
-				y_axis[k] = -1*voltage;
+				y_axis[k] = 0*voltage;
 				k++;
 
 			}
 
 			for(var i=0;i<arr_databit.length;i++)
 			{
-				if(arr_databit[i]=="1")     //According to Manchester scheme
-				{	                        //If bit is 1 then first half of time voltage=-ve
-				x_axis[k] = k;              //next half its +ve
-				y_axis[k] = -1*voltage;
-				k++;
+				if(arr_databit[i]=="1")
+				{
 				x_axis[k] = k;
 				y_axis[k] = 1*voltage;
 				k++;
+				x_axis[k] = k;
+				y_axis[k] = 0*voltage;
+				k++;
+
 				}
-				else                        //If bit is 0 then first half is +ve voltage
-				{                           //next half is -ve voltage
+				else
+				{
 				x_axis[k] = k;
-				y_axis[k] = 1*voltage;
+				y_axis[k] = 0*voltage;
 				k++;
 				x_axis[k]=k;
-				y_axis[k]=-1*voltage;
+				y_axis[k]= 0*voltage;
 				k++;
 				}
 
@@ -162,9 +144,12 @@ function plot(){
 				traceorder: 'reversed',
 				font: {size: 16},
 				yref: 'paper'
-			}};
+			},
+			plot_bgcolor:'#ecf0f5',
+			paper_bgcolor:"#ecf0f5",
+			};
 			//calling plotly to plot the graph
-			Plotly.newPlot('manchester', data, layout);
+			Plotly.newPlot('rz-uni', data, layout,{responsive: true});
 		}
 
 	}

@@ -34,15 +34,15 @@ function plot(){
 	//Checking if the user has not entered the databits and voltage
 	if(data_bit==="" && voltage==="")
 	{
-		 Materialize.toast('Please enter data bits and voltage', 1000)
+		 alert('Please enter data bits and voltage', 1000)
 	}
 	else if(data_bit==="")  //Checking if the user has not entered the databits
 	{
-		Materialize.toast('Please enter data bits', 1000)
+		alert('Please enter data bits', 1000)
 	}
 	else if(voltage==="")   //Checking if the user has not entered the voltage
 	{
-		Materialize.toast('Please enter voltage', 1000)
+		alert('Please enter voltage', 1000)
 	}
 	else
 	{
@@ -66,15 +66,15 @@ function plot(){
 		}
 		if(!Number(voltage) && !proper)
 		{
-			Materialize.toast('Please enter numerical value of voltage only, and binary databits only', 2000, 'black');
+			alert('Please enter numerical value of voltage only, and binary databits only', 2000, 'black');
 		}
 		else if(!Number(voltage))   //check if voltage is not correct
 		{
-			Materialize.toast('Please enter numerical value of voltage only', 2000, 'black');
+			alert('Please enter numerical value of voltage only', 2000, 'black');
 		}
 		else if(!proper)             //check if databits are not proper
 		{
-			Materialize.toast('Please enter binary databits only', 2000, 'black');
+			alert('Please enter binary databits only', 2000, 'black');
 		}
 		else
 		{
